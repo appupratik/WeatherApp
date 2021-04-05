@@ -14,8 +14,10 @@ const getInfo = async(event) => {
     } else {
         try {
             let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=6e07b6f23c317a96a88c5f68afde2311`;
-            const response = await fetch(url)
-            const data = await response.json()
+            const response = await fetch(url);
+            console.log('response' + response);
+            const data = await response.json();
+            console.log('data' + data)
             let currentTemp = 0;
             middle_layer.classList.remove('data_hide');
             tempValue = data.main.temp - 273.15;
