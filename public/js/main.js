@@ -13,7 +13,7 @@ const getInfo = async(event) => {
         middle_layer.classList.add('data_hide');
     } else {
         try {
-            let url = `https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=6e07b6f23c317a96a88c5f68afde2311`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&appid=6e07b6f23c317a96a88c5f68afde2311`;
             const response = await fetch(url);
             console.log('response' + response);
             const data = await response.json();
